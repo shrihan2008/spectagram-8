@@ -10,6 +10,8 @@ import {
   ScrollView,
   TextInput,
   Dimensions,
+  Button,
+  Alert
 } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import DropDownPicker from 'react-native-dropdown-picker';
@@ -127,6 +129,13 @@ export default class CreatePost extends Component{
                  <TextInput style={styles.textInput} onChangeText={caption=>this.setState({
                   caption
               })} placeholder={"Caption"}/>
+              </View>
+              <View>
+                <Button
+                  onPress={() => this.addPost()}
+                  title="Submit"
+                  color="red"
+                />
               </View>
             </ScrollView>
           </View>
